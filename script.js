@@ -11,16 +11,18 @@ function rgb(){
     }
 
     //la función va a cambiar los colores de los parrafos que esten dentro de la clase 'contenido'
-const element = document.querySelectorAll('.contenido p')
-
+const p = document.querySelectorAll('p')
+// se crea una funcion que cambie los colores de los parrafos
 function changeColor (event){
-    
+    event.currentTarget.style.color = rgb();
+}
+//se crea una uncion que retorne el color negro de los parrafos
+function returnColor(event){
+    event.currentTarget.style.color = 'black';
 }
 
 
-
-for(let i = 0; i < element.length; i++){
-    element[i].style.color = rgb();
+for(let i = 0; i < p.length; i++){
+    p[i].addEventListener('mouseenter', changeColor);
+    p[i].addEventListener('mouseleave', returnColor);
 }
-
-console.log(rgb());
