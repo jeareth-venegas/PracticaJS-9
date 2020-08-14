@@ -14,7 +14,7 @@ function rgb(){
 const p = document.querySelectorAll('p')
 // se crea una funcion que cambie los colores de los parrafos
 function changeColor (event){
-    event.currentTarget.style.color = rgb();
+    event.currentTarget.style.color = rgb(); //se llama a la primera función
 }
 //se crea una uncion que retorne el color negro de los parrafos
 function returnColor(event){
